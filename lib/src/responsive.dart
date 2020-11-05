@@ -121,8 +121,7 @@ abstract class ResponsiveStatefulWidget extends StatefulWidget {
 }
 
 ///
-abstract class ResponsiveState<T extends StatefulWidget>
-    extends State<T> {
+abstract class ResponsiveState<T extends StatefulWidget> extends State<T> {
   ///
   Widget buildMobile(BuildContext context);
 

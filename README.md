@@ -17,7 +17,7 @@ Responsive Stateful or Stateless Widget
 
  This package should only be used where the entire structure needs to be changed when resizing.
 
-###Save State
+### Save State
  For my purpose of creating this package :
     The state is not lost in case of size change (especially on the web).
     
@@ -29,7 +29,7 @@ Responsive Stateful or Stateless Widget
 
 ## Create Page
  
-###Stateful Widget
+### Stateful Widget
  
  In this package , state does not disappear in structure changes.
  
@@ -61,7 +61,7 @@ Responsive Stateful or Stateless Widget
   }
 ````
 
-###Stateless Widget
+### Stateless Widget
  
  Extends ResponsiveWidget and create missing overrides.
  
