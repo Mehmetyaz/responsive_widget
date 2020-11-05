@@ -17,7 +17,7 @@ Responsive Stateful or Stateless Widget
 
  This package should only be used where the entire structure needs to be changed when resizing.
 
- ###Save State
+ ### Save State
  For my purpose of creating this package :
     The state is not lost in case of size change (especially on the web).
     
