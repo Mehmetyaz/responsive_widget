@@ -1,0 +1,22 @@
+name: responsive_widget
+description: Responsive Stateful or Stateless Widget
+version: 0.0.1
+author: Mehmet Yaz
+
+
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  effective_dart: ^1.2.4
+  flutter_test:
+    sdk: flutter
+
+flutter:
+
