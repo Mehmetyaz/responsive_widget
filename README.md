@@ -29,6 +29,20 @@ Responsive Stateful or Stateless Widget
 
 ## Create Page
  
+### Set Global Breakpoints 
+
+````dart
+void main() {
+  responsiveWidgetController.setDefaultBreakpoints(
+    mobile: 500,
+    wideMobileOrTablet: 800,
+    wideTabletOrDesktop: 1150
+  );
+  runApp(const MyApp());
+}
+
+````
+
 ### Stateful Widget
  
  In this package , state does not disappear in structure changes.
