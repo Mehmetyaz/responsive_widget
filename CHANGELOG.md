@@ -1,3 +1,8 @@
+## [0.0.2] - 2020-11-06
+
+* Fixes
+
+
 ## [0.0.1] - 2020-11-06
 
 * Responsive Widget First Deployment
