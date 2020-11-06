@@ -1,5 +1,3 @@
-# responsive_widget
-
 Responsive Stateful or Stateless Widget
 
 ## Getting Started
@@ -21,11 +19,13 @@ Responsive Stateful or Stateless Widget
  For my purpose of creating this package :
     The state is not lost in case of size change (especially on the web).
     
- 
+  [![](https://img.youtube.com/vi/V4MYL5OyLDA/0.jpg)](https://www.youtube.com/watch?v=V4MYL5OyLDA)
 
 
 ## Import It
-`import 'package:responsive_widget/responsive_widget.dart';`
+````dart
+import 'package:responsive_page/responsive_widget.dart';
+````
 
 ## Create Page
  

@@ -1,6 +1,6 @@
 name: responsive_page
 description: Responsive Stateful or Stateless Widget. Define 4 different build methods and save your state..
-version: 0.0.2
+version: 0.0.3
 authors:
   - mehmedyaz@gmail.com
 repository: https://github.com/Mehmetyaz/responsive_widget.git
