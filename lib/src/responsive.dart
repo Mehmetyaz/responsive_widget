@@ -141,11 +141,11 @@ abstract class ResponsiveState<T extends StatefulWidget> extends State<T> {
     ///Responsive Controller
     final responsiveController = ResponsiveController();
     var screenW = MediaQuery.of(context).size.width;
-    if (screenW < responsiveController._mobileBreakPoint) {
+    if (screenW <= responsiveController._mobileBreakPoint) {
       return buildMobile(context);
-    } else if (screenW < responsiveController._wideMobileOrTablet) {
+    } else if (screenW > responsiveController._mobileBreakPoint && screenW <= responsiveController._wideMobileOrTablet) {
       return buildWideMobileOrTablet(context);
-    } else if (screenW < responsiveController._wideTabletOrDesktop) {
+    } else if (screenW > responsiveController._wideMobileOrTablet screenW <= responsiveController._wideTabletOrDesktop) {
       return buildWideTabletOrDesktop(context);
     } else {
       return buildDesktop(context);
