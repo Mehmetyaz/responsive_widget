@@ -3,22 +3,94 @@ import 'package:responsive_page/responsive_page.dart';
 
 void main() {
   responsiveWidgetController.setDefaultBreakpoints(mobile: 500);
-  runApp(const ResponsivePageExampleApp());
+  runApp(ResponsivePageExampleApp());
 }
 
 ///
 class ResponsivePageExampleApp extends StatelessWidget {
   ///
-  const ResponsivePageExampleApp({Key key}) : super(key: key);
+  ResponsivePageExampleApp({Key key}) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
+
+
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: AtoBExample(),
+    );
+  }
+}
+
+///
+class AtoBExample extends StatefulWidget {
+  @override
+  _AtoBExampleState createState() => _AtoBExampleState();
+}
+
+class _AtoBExampleState extends State<AtoBExample> {
+  ScrollController scrollController = ScrollController();
+
+  _toB() {
+    scrollController.animateTo(MediaQuery.of(context).size.width,
+        curve: Curves.easeIn, duration: const Duration(milliseconds: 500));
+  }
+
+  _toA() {
+    scrollController.animateTo(0,
+        curve: Curves.easeIn, duration: const Duration(milliseconds: 500));
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
+    return Scaffold(
+      body: SingleChildScrollView(
+        controller: scrollController,
+        scrollDirection: Axis.horizontal,
+        physics: const NeverScrollableScrollPhysics(),
+        child: Row(
+          children: [
+            // A
+            Builder(
+              builder: (c) {
+                print('GREEN BUILD');
+                return InkWell(
+                  onTap: (){
+                    print('TO B');
+                    _toB();
+                  },
+                  child: Container(
+                    width: size.width,
+                    height: size.height,
+                    color: Colors.green,
+                  ),
+                );
+              },
+            ),
+            Builder(
+              builder: (c) {
+                print('RED BUILD');
+                return InkWell(
+                  onTap: (){
+                    print('TO A');
+                    _toA();
+                  },
+                  child: Container(
+                    width: size.width,
+                    height: size.height,
+                    color: Colors.red,
+                  ),
+                );
+              },
+            )
+          ],
+        ),
+      ),
     );
   }
 }

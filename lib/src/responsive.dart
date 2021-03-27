@@ -77,7 +77,7 @@ class ResponsiveController {
 ///
 abstract class ResponsiveWidget extends StatelessWidget {
   ///default
-  const ResponsiveWidget({Key key}) : super(key: key);
+  const ResponsiveWidget({Key? key}) : super(key: key);
 
   ///
   Widget buildMobile(BuildContext context);
@@ -92,7 +92,7 @@ abstract class ResponsiveWidget extends StatelessWidget {
   Widget buildDesktop(BuildContext context);
 
   ///Don't Use
-  @deprecated
+  @protected
   @override
   Widget build(BuildContext context) {
     ///Responsive Controller
@@ -113,7 +113,7 @@ abstract class ResponsiveWidget extends StatelessWidget {
 ///
 abstract class ResponsiveStatefulWidget extends StatefulWidget {
   ///
-  const ResponsiveStatefulWidget({Key key}) : super(key: key);
+  const ResponsiveStatefulWidget({Key? key}) : super(key: key);
 
   @override
   // ignore: no_logic_in_create_state
